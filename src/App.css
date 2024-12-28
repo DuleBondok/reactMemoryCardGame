@@ -1,0 +1,215 @@
+@font-face {
+  font-family: Bangers;
+  src: url("public/fonts/Bangers.ttf");
+}
+
+@font-face {
+  font-family: Mogra;
+  src: url("public/fonts/Mogra.ttf");
+}
+
+body {
+  overflow-x: hidden;
+}
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+.parisImg {
+ height: 100vh;
+ width: 100vw;
+}
+
+.gameNameDiv {
+  position: absolute;
+  top: 6%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.767);
+  height: 16vh;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  gap: 2vw;
+}
+
+.gameNameHeader {
+  color: #254dc2;
+  font-family: Bangers;
+  font-size: 5rem;
+  letter-spacing: 1.5rem;
+  text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.gameNameIcon {
+  width: 6vw;
+  margin-bottom: 2vh;
+}
+
+.gameDescriptionHeader {
+  position: absolute;
+  top: 16%;
+  left: 48%;
+  font-size: 2rem;
+  color: black;
+  text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  font-family: Mogra;
+}
+
+.footerDiv{
+  width: 100%;
+  height: 8vh;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.836);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 0.7vw;
+}
+
+.footerText {
+  color: white;
+  font-size: 1rem;
+}
+
+.githubIcon {
+  width: 1.8vw;
+  margin-bottom: 1vh;
+}
+
+.githubIcon:hover {
+  cursor: pointer;
+  scale: 1.2;
+}
+
+.homeCommandsDiv {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 43vh;
+  left: 35.5%;
+  top: 30%;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.644);
+  border-radius: 1vh;
+}
+
+.soundIcon {
+  width: 2vw;
+  transition: transform 0.2s ease-in-out;
+}
+
+.soundIcon:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.homeCommandsHeader {
+  font-family: Bangers;
+  color: rgb(255, 123, 0);
+  padding-left: 15vh;
+  padding-right: 15vh;
+  padding-bottom: 2vh;
+  padding-top: 2vh;
+  background-color: black;
+}
+
+.homeCommandsHeader:hover {
+  cursor: pointer;
+  background-color: black;
+  scale: 1.2;
+}
+
+.howToHeader {
+  color: white;
+  background-color: black;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  padding-left: 1vh;
+  padding-right: 1vh;
+  font-size: 1.8rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-bottom: 5vh;
+}
+
+.howToCloseBtn {
+  background-color: black;
+  color: rgb(255, 123, 0);
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: Mogra;
+}
+
+.backIcon {
+  width: 3vw;
+}
+
+.backIcon:hover {
+  cursor: pointer;
+  scale: 1.2;
+}
+
+.chooseDiffHeader {
+  font-family: Bangers;
+  color: rgb(255, 123, 0);
+  letter-spacing: 0.5rem;
+}
+
+.easyDiffBtn {
+  width: 12vw;
+  height: 5vh;
+  font-family: Mogra;
+  font-size: 1.5rem;
+  letter-spacing: 1rem;
+  margin-bottom: 2vh;
+  color: green;
+  background-color: rgb(0, 0, 0);
+  border: 1px solid green;
+}
+
+.easyDiffBtn:hover {
+  scale: 1.2;
+  cursor: pointer;
+}
+
+.mediumDiffBtn {
+  width: 12vw;
+  height: 5vh;
+  font-family: Mogra;
+  font-size: 1.5rem;
+  letter-spacing: 1rem;
+  margin-bottom: 2vh;
+  color: orange;
+  background-color: rgb(0, 0, 0);
+  border: 1px solid orange;
+}
+
+.mediumDiffBtn:hover {
+  scale: 1.2;
+  cursor: pointer;
+}
+
+.hardDiffBtn {
+  width: 12vw;
+  height: 5vh;
+  font-family: Mogra;
+  font-size: 1.5rem;
+  letter-spacing: 1rem;
+  margin-bottom: 2vh;
+  color: red;
+  background-color: rgb(0, 0, 0);
+  border: 1px solid red;
+}
+
+.hardDiffBtn:hover {
+  scale: 1.2;
+  cursor: pointer;
+}
