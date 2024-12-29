@@ -27,6 +27,8 @@ body {
 
 .scoreHeader {
     font-family: Mogra;
+    border-bottom:  1px solid rgb(143, 143, 143);
+    padding-bottom: -2vh;
 }
 
 
@@ -322,6 +324,39 @@ body {
 
 
 .mediumDiffImages:hover {
+    cursor: pointer;
+    scale: 1.1;
+}
+
+.imagesDivHard {
+    position: absolute;
+    top: 10vh;
+    max-height: 68vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center ;
+    gap: 4vw;
+    flex-wrap: wrap;
+    max-width: 76vw;
+
+}
+
+.hardDiffImages {
+    object-fit: cover;
+    border-radius: 2vh;
+    height: 22vh;
+    border: 1px solid white;
+    transition: transform 2s ease; /* Smooth flip transition */
+    cursor: pointer;
+    transform-style: preserve-3d;
+}
+
+.hardDiffImages.flipped {
+    transform: rotateY(360deg);
+  }
+
+
+.hardDiffImages:hover {
     cursor: pointer;
     scale: 1.1;
 }

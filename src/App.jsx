@@ -10,17 +10,16 @@ import { useEffect } from "react";
 function App() {
   const [loading, setLoading] = useState(true);
 
-  // Simulate a delay or page load (e.g., fetching data, loading resources)
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 3000); // Adjust time as needed for your loading simulation
+    }, 3000);
   }, []);
 
   return (
     <Router>
       {loading ? (
-        <Loading /> // Show loading screen until page is ready
+        <Loading />
       ) : (
         <Routes>
           <Route path="/homepage" element={<HomePage />} />

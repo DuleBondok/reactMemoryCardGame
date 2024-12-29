@@ -14,7 +14,7 @@ function EasyDifficulty() {
   );
 
   const [images, setImages] = useState([]);
-  const [loading, setLoading] = useState(false); // Set loading to false initially
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [flipAll, setFlipAll] = useState(false);
   const [clickedImages, setClickedImages] = useState(new Set());
@@ -38,7 +38,7 @@ function EasyDifficulty() {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        setLoading(true); // Set loading to true while fetching images
+        setLoading(true);
 
         const fetchedImages = await Promise.all(
           API_URLS.map(async (url) => {
@@ -59,7 +59,7 @@ function EasyDifficulty() {
       } catch (err) {
         setError(err.message);
       } finally {
-        setLoading(false); // Set loading to false after fetching images
+        setLoading(false);
       }
     };
 
@@ -78,7 +78,7 @@ function EasyDifficulty() {
       setGameOver(false);
       setGameWon(false);
       shuffleImages();
-      return; // Allow clicking to restart immediately
+      return;
     }
 
     if (clickedImages.has(imageId)) {
@@ -118,11 +118,11 @@ function EasyDifficulty() {
 
   const menuFromLost = () => {
     setMessageDivVisible(!isMessageDivVisible);
-    setLoading(true); // Show loading before navigating
+    setLoading(true);
     setTimeout(() => {
       navigate("/homepage");
-      setLoading(false); // Set loading to false once we navigate
-    }, 1000); // Simulate a delay for the loading animation
+      setLoading(false);
+    }, 1000);
   };
 
   const tryAgain = () => {
@@ -132,7 +132,6 @@ function EasyDifficulty() {
 
   return (
     <>
-      {/* Display loading spinner if the loading state is true */}
       {loading && <Loading />}
 
       <div className="scoreDiv">
