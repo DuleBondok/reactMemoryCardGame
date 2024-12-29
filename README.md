@@ -1,8 +1,15 @@
-# React + Vite
+![Example Image](./public/screenshot.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Memory Game
+Simple memory card game in React, images are fetched from Pixabay API<br>
+**Rules:**
+- Choose each card once
+- Do not pick the same card twice or you lose
+- Each pick cards will reshuffle
+- Keep track of your score and highscore<br>
 
-Currently, two official plugins are available:
+## Features
+- Multiple difficulty settings
+- Added background music
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Good Luck!
