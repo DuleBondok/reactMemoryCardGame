@@ -1,0 +1,327 @@
+@font-face {
+    font-family: Bangers;
+    src: url("public/fonts/Bangers.ttf");
+  }
+  
+  @font-face {
+    font-family: Mogra;
+    src: url("public/fonts/Mogra.ttf");
+  }
+
+body {
+    background-color: black;
+}
+
+.scoreDiv {
+    width: 80vw;
+    height: 10vh;
+    position: absolute;
+    top: 8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 14vw;
+    left: 10%;
+}
+
+.scoreHeader {
+    font-family: Mogra;
+}
+
+
+.imagesDiv {
+    width: 100vw;
+    position: absolute;
+    top: 20vh;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4vw;
+}
+
+.easyDiffImages {
+    object-fit: cover;
+    border-radius: 2vh;
+    height: 50vh;
+    border: 1px solid white;
+    transition: transform 2s ease; /* Smooth flip transition */
+  cursor: pointer;
+  transform-style: preserve-3d;
+}
+
+.easyDiffImages.flipped {
+    transform: rotateY(360deg);
+  }
+
+
+.easyDiffImages:hover {
+    cursor: pointer;
+    scale: 1.1;
+}
+
+.backFromEasyBtn {
+    position: absolute;
+    background: transparent;
+    padding: 0px;
+    border: none;
+    cursor: pointer;
+    outline-offset: 4px;
+    outline-color: deeppink;
+    transition: filter 250ms;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    bottom: 5%;
+    left: 47%;
+  }
+  
+  .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: hsl(226, 25%, 69%);
+    border-radius: 8px;
+    filter: blur(2px);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+  }
+  
+  .edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    background: linear-gradient(
+      to right,
+      hsl(248, 39%, 39%) 0%,
+      hsl(248, 39%, 49%) 8%,
+      hsl(248, 39%, 39%) 92%,
+      hsl(248, 39%, 29%) 100%
+    );
+  }
+  
+  .front {
+    display: block;
+    position: relative;
+    border-radius: 8px;
+    background: hsl(248, 53%, 58%);
+    padding: 16px 32px;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 1rem;
+    transform: translateY(-4px);
+    transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+  }
+  
+  .backFromEasyBtn:hover {
+    filter: brightness(110%);
+  }
+  
+  .backFromEasyBtn:hover .front {
+    transform: translateY(-6px);
+    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+  }
+  
+  .backFromEasyBtn:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+  }
+  
+  .backFromEasyBtn:hover .shadow {
+    transform: translateY(4px);
+    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+  }
+  
+  .backFromEasyBtn:active .shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+  }
+  
+  .backFromEasyBtn:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  .wholeScreenCoverDiv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.767);
+    display: flex;
+  }
+
+.hidden {
+    display: none;
+  }
+
+  .gameOverDiv {
+    width: 30vw;
+    height: 26vh;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 30%;
+    left: 35.8%;
+    background-color: black;
+    border-radius: 1vh;
+    border: 1px solid rgb(226, 226, 226);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gameOverHeader {
+    font-family: Bangers;
+    font-size: 2.2rem;
+    z-index: 5;
+    letter-spacing: 1rem;
+    color: rgb(0, 174, 255);
+    margin-bottom: 6vh;
+  }
+
+  .gameOverButtonsDiv {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5vw;
+  }
+
+  .menuFromLostBtn {
+    width: 10em;
+    position: relative;
+    height: 3.5em;
+    border: 3px ridge #149CEA;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 1rem;
+  }
+  
+  .menuFromLostBtn::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: #000000;
+    transition: 0.5s;
+    transform-origin: center;
+  }
+  
+  .menuFromLostBtn::before {
+    content: "";
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: #000000;
+    transition: 0.5s;
+  }
+  
+  .menuFromLostBtn:hover::before, .menuFromLostBtn:hover::after {
+    transform: scale(0)
+  }
+  
+  .menuFromLostBtn:hover {
+    box-shadow: inset 0px 0px 25px #1479EA;
+  }
+
+  .playAgainBtn {
+    width: 10em;
+    position: relative;
+    height: 3.5em;
+    border: 3px ridge #149CEA;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 0.2rem;
+  }
+  
+  .playAgainBtn::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: #000000;
+    transition: 0.5s;
+    transform-origin: center;
+  }
+  
+  .playAgainBtn::before {
+    content: "";
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: #000000;
+    transition: 0.5s;
+  }
+  
+  .playAgainBtn:hover::before, .playAgainBtn:hover::after {
+    transform: scale(0)
+  }
+  
+  .playAgainBtn:hover {
+    box-shadow: inset 0px 0px 25px #1479EA;
+  }
+
+  .imagesDivMedium {
+    min-width: 56vw;
+    max-width: 58vw;
+    position: absolute;
+    top: 10vh;
+    height: 68vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between ;
+    gap: 3vw;
+    flex-wrap: wrap;
+}
+
+.mediumDiffImages {
+    object-fit: cover;
+    border-radius: 2vh;
+    min-height: 28vh;
+    max-height: 30vh;
+    border: 1px solid white;
+    transition: transform 2s ease; /* Smooth flip transition */
+    cursor: pointer;
+    transform-style: preserve-3d;
+}
+
+.mediumDiffImages.flipped {
+    transform: rotateY(360deg);
+  }
+
+
+.mediumDiffImages:hover {
+    cursor: pointer;
+    scale: 1.1;
+}

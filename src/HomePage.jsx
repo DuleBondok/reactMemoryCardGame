@@ -3,8 +3,9 @@ import "./App.css";
 import githubClick from "./Functions";
 import ReactHowler from "react-howler";
 import backgroundMusic from "/public/music.mp3";
+import { useNavigate } from "react-router-dom";
 
-function HomePage() {
+function HomePage({ OnEasyClick }) {
   const [isPlaying, setIsPlaying] = useState(true);
 
   const toggleMusic = () => {
@@ -24,6 +25,8 @@ function HomePage() {
   const showDifficultyContent = () => {
     setContent("difficulty");
   };
+
+  const navigate = useNavigate();
 
   return (
     <>
@@ -76,9 +79,24 @@ function HomePage() {
           {content === "difficulty" && (
             <>
               <h1 className="chooseDiffHeader">Choose difficulty</h1>
-              <button className="easyDiffBtn">EASY</button>
-              <button className="mediumDiffBtn">MEDIUM</button>
-              <button className="hardDiffBtn">HARD</button>
+              <button
+                className="easyDiffBtn"
+                onClick={() => navigate("/easy-difficulty")}
+              >
+                EASY
+              </button>
+              <button
+                className="mediumDiffBtn"
+                onClick={() => navigate("/medium-difficulty")}
+              >
+                MEDIUM
+              </button>
+              <button
+                className="hardDiffBtn"
+                onClick={() => navigate("/hard-difficulty")}
+              >
+                HARD
+              </button>
               <img
                 className="backIcon"
                 src="/public/back.png"
