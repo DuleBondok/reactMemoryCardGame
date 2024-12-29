@@ -13,3 +13,6 @@ Simple memory card game in React, images are fetched from Pixabay API<br>
 - Added background music
 
 Good Luck!
+
+## 💻 Built With
+![javascript](https://skillicons.dev/icons?i=js,react&perline=10)
